@@ -1,6 +1,6 @@
 body {
   margin: auto;
-  max-width: 1200px;
+  max-width: 100%;
 }
 
 .app {
@@ -47,4 +47,15 @@ body {
   font-size: 14px;
   margin: 0;
 }
+.header{
+  margin:auto
+  max-width:1200px;
+}
 
+.hero-section {
+  background-image:url("/sfp-frontend-assessment/public/assets/images/GettyImages-889642362.jpg");
+}
+
+.h2 {
+  text-align:center;
+}
