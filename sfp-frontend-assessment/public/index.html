@@ -5,6 +5,32 @@
 	<link rel="stylesheet" type="text/css" href="./assets/app.css">
 </head>
 <body>
+	<section>
+		<div class="container">
+			<div class="hero-section">
+			<header>
+				<a href="/"><img src="assets/images/logo-01.png" alt="logo"
+			   width="100px"
+			   height="50px"></a>
+				<nav>
+					<ul>
+						<li v-for="(genre, index) in genres" @click="currentGenreId = genre.id" :key="index" v-text="genre.name"></li>
+					</ul>
+				</nav>
+			</header>
+			<section class="hero">
+				<h1 v-text="currentGenre.name"></h1>
+				<a href="#movies">View List</a>
+			</section>
+			</div>
+			<section class="app" id="movies">
+				<h2>{{ currentGenre.name }} Movies</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<grid :genre="currentGenreId"></grid>
+			</section>
+		</div>
+	</section>
+	
 	<div id="app"></div>
 	<script src="./assets/app.js"></script>
 </body>
